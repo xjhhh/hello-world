@@ -53,12 +53,15 @@ bool checkIndex(string str, int i) {
 			return *itor == i;
 		} else {
 			int j = *(itor + 1);
+			bool ret = true;
 			for (int k = i + 1; k < j; k++) {
 				if (checkIndex(str, k)) {
 					return (str[k] - '0') <= c_number;
+				} else if (ret) {
+					ret = (str[k] - '0') <= c_number;
 				}
 			}
-			return true;
+			return ret;
 		}
 	}
 }
