@@ -15,7 +15,8 @@ int main() {
 			if (isdigit(str[i])) {//这是一个数字
 				int c_number = str[i] - '0';
 				str_ana[c_number].push_back(i);//push这个数字的当前下标
-			} else {
+			}
+			else {
 				cout << "please input a number!" << endl;
 				continue;
 			}
@@ -29,8 +30,9 @@ int main() {
 						ret.push_back(c_number);
 					}
 				}
-				for (unsigned int i = 0; i < ret.size(); i++){
-					cout << ret[i];
+				vector<int>::iterator iter;
+				for (iter = ret.begin(); iter < ret.end(); iter++) {//vector从前向后遍历
+					cout << *iter;
 				}
 				cout << endl;
 			}
@@ -42,17 +44,18 @@ int main() {
 bool checkIndex(string str, int i) {
 	if (i > (int)(str.length() - 1)) {
 		cout << "索引越界" << endl;
-	} else {
+	}
+	else {
 		int c_number = str[i] - '0';
 		vector<int> c_vector = str_ana[c_number];
-		vector<int>::iterator itor = c_vector.begin();
-		while (*itor != i && itor + 1 != c_vector.end()) {//!!!!!!  itor + 1
-			itor++;
+		vector<int>::iterator iter = c_vector.begin();
+		while (*iter != i && iter + 1 != c_vector.end()) {//!!!!!!  itor + 1
+			iter++;
 		}
-		if (itor + 1 == c_vector.end()) {
-			return *itor == i;
+		if (iter + 1 == c_vector.end()) {
+			return *iter == i;
 		} else {
-			int j = *(itor + 1);
+			int j = *(iter + 1);
 			bool ret = true;
 			for (int k = i + 1; k < j; k++) {
 				if (checkIndex(str, k)) {
