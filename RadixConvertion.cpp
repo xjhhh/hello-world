@@ -35,10 +35,10 @@ int toInt(char c) {
 }
 
 char toChar(int n) {
-	if (n <= 9){
+	if (n <= 9) {
 		return n + '0';
 	}
-	else if (n <= 35){
+	else if (n <= 35) {
 		return n - 10 + 'a';
 	}
 	else if (n <= 62) {
