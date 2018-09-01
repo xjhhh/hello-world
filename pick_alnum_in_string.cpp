@@ -19,7 +19,7 @@ int main(void){
 	}
 
 	vector<char> s;
-	for (int i = 0; i < s_len; i++){
+	for (int i = 0; i < s_len; i++) {
 		if (isalnum(str[i])){
 			if (i % 2){
 				s.push_back(str[i]);
