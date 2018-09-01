@@ -62,7 +62,7 @@ void toNew(long num, int n) {
 		num /= n;
 	}
 	vector<char>::iterator iter;
-	for (iter = ret.end(); iter > ret.begin(); --iter) {//vector从后向前遍历
+	for (iter = ret.end(); iter > ret.begin(); --iter) {//从后向前遍历vector
 		cout << *(iter - 1);
 	}
 	cout << endl;
