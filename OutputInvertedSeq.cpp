@@ -26,7 +26,7 @@ int main() {
 		if (isNegtive) {
 			cout << '-';
 		}
-		for (iter = ns.end(); iter != ns.begin(); iter--) {
+		for (iter = ns.end(); iter > ns.begin(); iter--) {
 			if (iter - 1 == ns.begin()) {
 				cout << *(iter - 1);
 			}
@@ -39,7 +39,7 @@ int main() {
 		if (isNegtive) {//逆向输出
 			cout << '-';
 		}
-		for (iter = ns.begin(); iter != ns.end(); iter++) {
+		for (iter = ns.begin(); iter < ns.end(); iter++) {
 			cout << *iter;
 		}
 		cout << endl;
