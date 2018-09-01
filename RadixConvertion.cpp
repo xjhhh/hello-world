@@ -6,20 +6,16 @@ using namespace std;
 
 int toInt(char c);//将字符值转换成进制值
 char toChar(int n);//将进制值转换成字符值
-long toTen(string str, int o);//将原进制转换成十进制
-void toNew(long num, int n);//将十进制转换成新进制
+long toTen(string str, int o);//将原进制转换成十进制（long）
+void toNew(long num, int n);//将十进制（long）转换成新进制
 
 int main() {
 	int o, n;
 	string str;
-	while (cin  >> o >> n >> str, o != 0) {
-		char negtive = '+';
-		if (str[0] == '-') {
-			negtive = '-';
+	while (cin >> o >> n >> str, o != 0) {
+		if (str[0] == '-') {//负数直接输出"-"，并把"-"去掉
+			cout << '-';
 			str.erase(str.begin());
-		}
-		if (negtive == '-') {
-			cout << negtive;
 		}
 		toNew(toTen(str, o), n);
 	}
