@@ -25,9 +25,11 @@ int main() {
 int toInt(char c) {
 	if (c >= '0' && c <= '9') {
 		return c - '0';
-	} else if (c >= 'a' && c <= 'z') {
+	}
+	else if (c >= 'a' && c <= 'z') {
 		return c - 'a' + 10;
-	} else if (c >= 'A' && c <= 'Z') {
+	}
+	else if (c >= 'A' && c <= 'Z') {
 		return c - 'A' + 36;
 	}
 }
@@ -35,9 +37,11 @@ int toInt(char c) {
 char toChar(int n) {
 	if (n <= 9){
 		return n + '0';
-	} else if (n <= 35){
+	}
+	else if (n <= 35){
 		return n - 10 + 'a';
-	} else if (n <= 62) {
+	}
+	else if (n <= 62) {
 		return n - 36 + 'A';
 	}
 }
@@ -58,7 +62,7 @@ void toNew(long num, int n) {
 		num /= n;
 	}
 	vector<char>::iterator iter;
-	for (iter = ret.end(); iter != ret.begin(); --iter) {//vector从后向前遍历
+	for (iter = ret.end(); iter > ret.begin(); --iter) {//vector从后向前遍历
 		cout << *(iter - 1);
 	}
 	cout << endl;
