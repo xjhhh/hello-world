@@ -20,7 +20,7 @@ int main() {
 				cout << "please input a number!" << endl;
 				continue;
 			}
-			if (i == s_len - 1) {//输入是合法的
+			if (i == s_len - 1) {//输入合法
 				vector<int> ret;
 				for (int i = 0; i < s_len; i++) {
 					if (checkIndex(str, i)) {//找到真数后，该真数的索引桶只保留当前这个索引
