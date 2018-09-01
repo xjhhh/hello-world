@@ -32,7 +32,7 @@ int main(){
 	// 		}else if(size<3){
 	// 			printf("棋盘边长至少是3！\n");
 	// 		}else{
-	board = (int **)malloc(sizeof(int *)* size);
+	board = (int **)malloc(sizeof(int *)* size);//使用malloc申请二维数组
 	for (int i = 0; i < size; i++) {
 		board[i] = (int *)malloc(sizeof(int)* size);
 	}
