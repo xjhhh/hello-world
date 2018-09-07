@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<ctype.h>
+#include<cctype>
 #include<vector>
 
 using namespace std;
